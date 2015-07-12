@@ -28,6 +28,11 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/d855/bluetooth
 TARGET_KERNEL_CONFIG := cyanogenmod_d855_defconfig
 TARGET_REQUIRES_BUMP := true
 
+# Optimizations
+ROM_OPTIS := true
+BOARD_GLOBAL_CFLAGS := -mvectorize-with-neon-quad
+BOARD_GLOBAL_CPPFLAGS := -mvectorize-with-neon-quad
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
